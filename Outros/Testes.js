@@ -1,6 +1,6 @@
 const freq = new Array(26).fill(0);
 
-const s = 'opaaaaa'
+const s = 'Teste de string para contar a frequência de cada letra do alfabeto.';
 
 console.log(freq)
 for (const char of s) {
