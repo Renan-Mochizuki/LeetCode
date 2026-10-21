@@ -1,5 +1,7 @@
 class Solution {
   public int climbStairs(int n) {
+    // A solução do item atual depende da solução dos dois itens anteriores, portanto fibonacci
+    // Implementação iterativa, para não estourar a pilha de recursão
     int[] computed = new int[n + 1];
 
     computed[0] = 1;

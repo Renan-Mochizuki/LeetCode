@@ -15,6 +15,7 @@
  */
 class Solution {
   public boolean isSameTree(TreeNode p, TreeNode q) {
+    // Casos especiais
     if (p == null && q == null) {
       return true;
     }
@@ -26,19 +27,20 @@ class Solution {
   }
 
   private boolean dfs(TreeNode p, TreeNode q) {
+    // Ambas árvores chegaram a um fim, ainda é válido
     if (p == null && q == null) {
       return true;
     }
-    if (p == null) {
+    // Uma das árvores chegou a um fim, enquanto a outra não, é diferente
+    if (p == null || q == null) {
       return false;
     }
-    if (q == null) {
-      return false;
-    }
+    // Os valores são diferentes
     if (p.val != q.val) {
       return false;
     }
 
+    // Ande em dfs em ambas árvores
     if (!dfs(p.left, q.left)) {
       return false;
     }

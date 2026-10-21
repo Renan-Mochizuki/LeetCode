@@ -6,6 +6,8 @@ class Solution {
 
     int i = -1, j = -1;
 
+    // Vamos percorrer todo array, e ir guardando os valores em um HashMap
+    // Verificando se o valor target-nums[i] existe no HashMap
     for (i = 0; i < nums.length; i++) {
       int difference = target - nums[i];
       Integer jValue = map.get(difference);
