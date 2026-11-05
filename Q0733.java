@@ -11,6 +11,7 @@ class Solution {
   public int[][] floodFill(int[][] image, int sr, int sc, int color) {
     this.m = image.length;
     this.n = image[sr].length;
+
     if (this.m == 0 || this.n == 0) {
       return image;
     }
@@ -35,6 +36,7 @@ class Solution {
       int i = current[0];
       int j = current[1];
 
+      // Verifica nas 4 direções
       checkNeighbor(i, j - 1);
       checkNeighbor(i - 1, j);
       checkNeighbor(i, j + 1);
@@ -43,6 +45,7 @@ class Solution {
   }
 
   private boolean checkNeighbor(int i, int j) {
+    // Verifica se a posição é inválida
     if (i >= m || j >= n || i < 0 || j < 0) {
       return false;
     }

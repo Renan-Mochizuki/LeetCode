@@ -4,6 +4,7 @@ class Solution {
     int max = 0;
 
     for (int i = 1; i < prices.length; i++) {
+      // Move ponteiro esquerdo e garante que o ponteiro direito não seja menor
       if (prices[i] < prices[l]) {
         l = i;
         if (r < l) {

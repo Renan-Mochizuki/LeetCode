@@ -22,7 +22,7 @@ class Solution {
     return max;
   }
 
-  // Aqui jaz o pior código do mundo, só deus sabe o que eu fiz
+  // Navegação por 'DFS', calcula a profundidade máxima de cada lado
   private int depthSearch(TreeNode subRoot, int depth) {
     int longestDepthLeft = depth;
     int longestDepthRight = depth;
@@ -48,6 +48,7 @@ class Solution {
       longestDepthRight = computedDepth;
     }
 
+    // Subtraimos depth para obter a profundidade relativa atual
     int diameter = longestDepthLeft - depth + longestDepthRight - depth;
     if (diameter > this.max) {
       this.max = diameter;
